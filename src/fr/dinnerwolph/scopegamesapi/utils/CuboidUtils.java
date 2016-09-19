@@ -35,7 +35,7 @@ public class CuboidUtils {
         loc.put(nbr, map);
     }
 
-    public static boolean isArena(Location playerLocation, Integer nbr) {
+    public static boolean isOnArena(Location playerLocation, Integer nbr) {
         Map<Location, Location> map = loc.get(nbr);
         Map.Entry<Location, Location> mapp = map.entrySet().iterator().next();
         minLoc = mapp.getKey();

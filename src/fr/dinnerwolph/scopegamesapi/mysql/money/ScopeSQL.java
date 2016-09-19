@@ -115,7 +115,7 @@ public class ScopeSQL {
     }
 
     public void removeScopes(UUID uuid, int money) {
-        money = this.getScopes(uuid) - money;
+        money -= this.getScopes(uuid);
         try {
             PreparedStatement preparedStatement = this.getConnection().prepareStatement("UPDATE `Scopes` SET `money`=? WHERE uuid=?");
             preparedStatement.setInt(1, money);
